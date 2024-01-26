@@ -1,0 +1,203 @@
+/* ------------------------------ These Styles will apply to the entire Web Site  ------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Styles applied to the body section */
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+/* Styles applied to all the a tags */
+a {
+    text-decoration: none;
+}
+
+
+/* Styles applied to the navigation bar */
+nav {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Styles applied to the items within the unordered-list */
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    line-height: 20px;
+    padding: 20px 20px;
+}
+
+/* Styles applied to the images within the unordered-list items */
+.logo-img {
+    transition: transform 0.3s;
+}
+
+/* Scale the image on hover */
+.logo-img:hover {
+    transform: scale(1.2);
+}
+
+.nav-li-text {
+    padding-top: 40px;
+}
+
+/* Styles applied to the hyperlink within the unordered-ist items */
+.nav-a {
+    text-decoration: none;
+    color: white;
+    font-family: 'arial', serif;
+    font-size: 18px;
+    transition: font-size 0.3s; /* Add a smooth transition effect */
+}
+
+.nav-a:hover {
+    font-size: 22px;  /* Change size (increase) when hover */
+    color: #9a9a9a; /* Change color when hover */
+}
+
+
+/* Styles applied to all the h1 tags */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+/* Styles applied to both h1 and h2 tags */
+h1, h2 {
+    color: #113a77;
+}
+
+
+.greetings-section {
+    padding: 20px 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+.form-block {
+    padding: 20px 20px;
+    background-color: rgba(0, 34, 68, 0.9);
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.form-block label,.form-block p {
+    color: white;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.form-block input {
+    background-color:rgba(228, 228, 228, 0.7);
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form-textarea {
+    background-color:rgba(228, 228, 228, 0.7);
+    max-width: 900px;
+}
+
+/* Style for Submit button */
+.form-block input[type="submit"] {
+    background-color: #1b1f23;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+.table-section {
+    padding: 20px 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* Styles applied to the class container (which contains the form) */
+.container {
+    border: 2px solid #000000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    background-color:rgba(129, 142, 152, 0.7);
+    color: rgb(255, 255, 255);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #a29d9d;
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #333;
+    color: white;
+}
+
+.data-table img {
+    max-width: 100px; /* Set a max-width for avatar images */
+    height: auto;
+    border-radius: 50%; /* Optional: Add a border-radius for circular avatars */
+}
+
+
+/* Styles applied to the footer */
+footer {
+    margin-top: auto;
+    /* This pushes the footer to the bottom. */
+    padding: 10px;
+    width: 100%;
+    font-size: 8px;
+    text-align: center;
+    background-color: rgba(91, 91, 91, 0.4);
+    color: white;
+}
+
+/* Styles applied to the hyperlink within a paragraph in top an article. */
+footer p a {
+    text-decoration: none;
+    font-size: 7px;
+    font-family: 'Arial', serif;
+    color: #ffffff;
+}

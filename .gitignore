@@ -1,0 +1,7 @@
+# PhpStorm
+#  IntelillJ idea folder
+.idea/
+
+### Mac OS ###
+.DS_Store
+
