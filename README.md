@@ -2,8 +2,7 @@
 
 ## Objective
 
-The Interest Portal is a web application designed to capture user information and interests. The project consists of two
-main pages:
+The Interest Portal is a web application designed to capture user information and interests. 
 
 ## Content
 
