@@ -4,14 +4,20 @@
 <?php
 
 // Database Variables
+
+// MODIFY THIS with your MySQL server credential details
 $servername = "localhost";
 $username = "root";
 $password = "root";
+
+// Defined database and table name (DO NOT TOUCH THIS !!!)
 $database = "subscriber_portal";
-$table = "subscriber_portal";
+$table = "subscriber_info";
+
 
 // Debug variable (Flag) to control the printing of debug messages.
 $debug = false;
+
 
 // Flag to check if the database already exist
 $use_active = false;
@@ -49,19 +55,19 @@ if ($conn->connect_error) {
                 // Marking use flag as true
                 $use_active = true;
 
-                // Check if the subscriber_portal table exist
-                $query = "SHOW TABLES LIKE 'subscriber_portal'";
+                // Check if the subscriber_info table exist
+                $query = "SHOW TABLES LIKE '$table'";
                 if ($conn->query($query) === TRUE) {
                     if ($debug) {
-                        echo "<br>The 'subscriber_portal' Table Already Exist<br>";
+                        echo "<br>The '$table' Table Already Exist<br>";
                     }
                 } else {
                     if ($debug) {
-                        echo "<br>The 'subscriber_portal' table does not exist<br>";
+                        echo "<br>The '$table' table does not exist<br>";
                     }
 
-                    // Create the subscriber_portal table
-                    $query = "CREATE TABLE subscriber_portal
+                    // Create the subscriber_info table
+                    $query = "CREATE TABLE $table
                                         (
                                             id              INT AUTO_INCREMENT PRIMARY KEY,
                                 avatarURL       VARCHAR(255)                     NOT NULL,
@@ -76,11 +82,11 @@ if ($conn->connect_error) {
                             )";
                     if ($conn->query($query) === TRUE) {
                         if ($debug) {
-                            echo "<br>The 'subscriber_portal' Table created successfully<br>";
+                            echo "<br>The '$table' Table created successfully<br>";
                         }
 
                         // Creating default records
-                        $query = "INSERT INTO subscriber_portal (avatarURL, name, gender, age, email, html, css, javascript, about)  VALUES 
+                        $query = "INSERT INTO $table (avatarURL, name, gender, age, email, html, css, javascript, about)  VALUES 
                                 ('https://drive.google.com/thumbnail?id=1w0NR8FMqmjEedcnMdj9CeUiUBWwQ09WG', 'Emily Johnson', 'Female', 28, 'emily.johnson@example.com', 1, 0, 1, 'Exploring the world of coding and creating amazing web experiences.'), 
                                 ('https://drive.google.com/thumbnail?id=153_WwCRYNkQFkFgiRtY20Aom6LVXqixL', 'Daniel Miller', 'Male', 32, 'daniel.miller@example.com', 1, 1, 0, 'Software engineer with a love for problem-solving and building efficient solutions.'),
                                 ('https://drive.google.com/thumbnail?id=19fMtzUAjzfnDolAQ_R1CehwqXwf9_F7y', 'Leila Wilson', 'Other', 26, 'leila.wilson@example.com', 0, 1, 1, 'Web developer with a passion for creating seamless user experiences.')";
@@ -95,7 +101,7 @@ if ($conn->connect_error) {
                         }
                     } else {
                         if ($debug) {
-                            echo "<br>Error Creating 'subscriber_portal' table<br>";
+                            echo "<br>Error Creating '$table' table<br>";
                         }
 
                     }
@@ -104,7 +110,7 @@ if ($conn->connect_error) {
                 }
             } else {
                 if ($debug) {
-                    echo "<br>Error trying to use '$database'<br>";
+                    echo "<br>Error trying to use '$table'<br>";
                 }
             }
 
@@ -116,7 +122,7 @@ if ($conn->connect_error) {
         }
     } else {
         if ($debug) {
-            echo "<br>Database '$database' already exists" . "<br>";
+            echo "<br>Database '$table' already exists" . "<br>";
         }
     }
 }
@@ -177,7 +183,7 @@ if ($use_active) {
             echo "<br>Received Values ('$avatarURL', '$name', '$gender', $age, '$email', $html, $css, $javascript, '$about')<br>";
         }
         // Creating the new record
-        $query = "INSERT INTO subscriber_portal (avatarURL, name, gender, age, email, html, css, javascript, about) 
+        $query = "INSERT INTO $table (avatarURL, name, gender, age, email, html, css, javascript, about) 
                       VALUES ('$avatarURL', '$name', '$gender', $age, '$email', $html, $css, $javascript, '$about') ";
         if ($conn->query($query) === TRUE) {
             if ($debug) {
@@ -193,8 +199,8 @@ if ($use_active) {
     if ($debug) {
         echo "<br>Selecting Records<br>";
     }
-    // Query to retrieve records from the subscriber_portal table
-    $query = "SELECT * FROM subscriber_portal";
+    // Query to retrieve records from the subscriber_info table
+    $query = "SELECT * FROM $table";
     $result = $conn->query($query);
     // Fetch all rows into an associative array
 

@@ -2,7 +2,7 @@
 
 ## Objective
 
-The Interest Portal is a web application designed to capture user information and interests. 
+The Interest Portal is a web application designed to capture user information and interests.
 
 ## Content
 
@@ -28,9 +28,13 @@ pattern, preventing form resubmission when the page is refreshed after submissio
 
 1. Clone the repository.
 2. Set up a local server environment (e.g., Apache, PHP).
-3. Run the project in your web browser.
-4. Go to the home page and fill out the form. (If you do not have an avatar URL, you can use this
-   URL: https://drive.google.com/file/d/14hIYqyiKndAfMQf7zJfDoWo9cfqLc4kd/view?usp=sharing)
+3. Update the info.php code with your MySQL server credentials 
+   (Line 8: // MODIFY THIS with your MySQL server credential details
+   $servername = "localhost";
+   $username = "root";
+   $password = "root";)
+4. Run the project in your web browser. Go to the home page and fill out the form. (If you do not have an avatar URL,
+   you can use this URL: https://drive.google.com/file/d/14hIYqyiKndAfMQf7zJfDoWo9cfqLc4kd/view?usp=sharing)
 5. Visit the info page to see the newly saved record and some previously saved example records.
 6. Continue saving more profiles.
 7. Enjoy!
