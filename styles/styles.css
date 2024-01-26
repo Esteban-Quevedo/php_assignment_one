@@ -1,9 +1,10 @@
-/* ------------------------------ These Styles will apply to the entire Web Site  ------------------------------ */
+/* These Styles will apply to the entire Web Site */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Styles applied to the body section */
 body {
     margin: 0;
@@ -42,6 +43,7 @@ nav ul li {
     transform: scale(1.2);
 }
 
+/* Styles applied to the nav-li-text Class */
 .nav-li-text {
     padding-top: 40px;
 }
@@ -55,6 +57,7 @@ nav ul li {
     transition: font-size 0.3s; /* Add a smooth transition effect */
 }
 
+/* Styles applied to the nav-a Class when Hover*/
 .nav-a:hover {
     font-size: 22px;  /* Change size (increase) when hover */
     color: #9a9a9a; /* Change color when hover */
@@ -67,19 +70,19 @@ h1 {
     text-align: center;
 }
 
-
 /* Styles applied to both h1 and h2 tags */
 h1, h2 {
     color: #113a77;
 }
 
-
+/* Styles applied to the greetings-section Class */
 .greetings-section {
     padding: 20px 20px;
     margin-left: 40px;
     margin-right: 40px;
 }
 
+/* Styles applied to the form-section Class */
 .form-section {
     display: flex;
     flex-direction: column;
@@ -89,10 +92,12 @@ h1, h2 {
     margin-right: 40px;
 }
 
+/* Styles applied to the justified-text Class */
 .justified-text {
     text-align: justify;
 }
 
+/* Styles applied to the form-block Class */
 .form-block {
     padding: 20px 20px;
     background-color: rgba(0, 34, 68, 0.9);
@@ -100,23 +105,28 @@ h1, h2 {
     border-radius: 8px;
 }
 
+/* Styles applied to the form-block Class specifically to both label and p tags*/
 .form-block label,.form-block p {
     color: white;
 }
 
+/* Styles applied to the form-label Class */
 .form-label {
     font-weight: bold;
     font-size: 1.1rem;
 }
 
+/* Styles applied to the full-width Class */
 .full-width {
     width: 100%;
 }
 
+/* Styles applied to the  Class */
 .half-width {
     width: 50%;
 }
 
+/* Styles applied to the form-block Class specifically to the input tags*/
 .form-block input {
     background-color:rgba(228, 228, 228, 0.7);
     padding: 8px;
@@ -124,6 +134,7 @@ h1, h2 {
     box-sizing: border-box;
 }
 
+/* Styles applied to the form-textarea Class */
 .form-textarea {
     background-color:rgba(228, 228, 228, 0.7);
     max-width: 900px;
@@ -140,14 +151,14 @@ h1, h2 {
     border-radius: 50px;
 }
 
-
+/* Styles applied to the table-section Class */
 .table-section {
     padding: 20px 20px;
     margin-left: 40px;
     margin-right: 40px;
 }
 
-/* Styles applied to the class container (which contains the form) */
+/* Styles applied to the class container */
 .container {
     border: 2px solid #000000;
     padding: 20px;
@@ -158,23 +169,27 @@ h1, h2 {
     color: rgb(255, 255, 255);
 }
 
+/* Styles applied to the data-table Class */
 .data-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
+/* Styles applied to the data-table Class  specially to the th and td tags*/
 .data-table th, .data-table td {
     border: 1px solid #a29d9d;
     padding: 8px;
     text-align: center;
 }
 
+/* Styles applied to the the th tags inside the data-table Class */
 .data-table th {
     background-color: #333;
     color: white;
 }
 
+/* Styles applied to the img tags into the data-table Class */
 .data-table img {
     max-width: 100px; /* Set a max-width for avatar images */
     height: auto;
@@ -184,8 +199,7 @@ h1, h2 {
 
 /* Styles applied to the footer */
 footer {
-    margin-top: auto;
-    /* This pushes the footer to the bottom. */
+    margin-top: auto; /* This pushes the footer to the bottom. */
     padding: 10px;
     width: 100%;
     font-size: 8px;

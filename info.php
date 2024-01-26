@@ -1,15 +1,16 @@
+
 <?php include_once 'header.php'; ?>
 
 <?php
 
+// Database Variables
 $servername = "localhost";
 $username = "root";
 $password = "root";
 $database = "subscriber_portal";
 $table = "subscriber_portal";
 
-
-// Create a debug variable to control the printing of debug messages.
+// Debug variable (Flag) to control the printing of debug messages.
 $debug = false;
 
 // Flag to check if the database already exist
@@ -80,11 +81,9 @@ if ($conn->connect_error) {
 
                         // Creating default records
                         $query = "INSERT INTO subscriber_portal (avatarURL, name, gender, age, email, html, css, javascript, about)  VALUES 
-                                ('https://drive.google.com/thumbnail?id=1w0NR8FMqmjEedcnMdj9CeUiUBWwQ09WG', 'Emily Johnson', 'Female', 28, 'emily.johnson@example.com', 1, 1, 0, 'Exploring the world of coding and creating amazing web experiences.'), 
-                                ('https://drive.google.com/thumbnail?id=1Vooh66VvVqaPBB8ICrUC5Ddnj26T28RJ', 'Sophia Williams', 'Female', 30, 'sophia.williams@example.com', 0, 1, 0, 'Passionate about technology and making a positive impact through programming.'),
+                                ('https://drive.google.com/thumbnail?id=1w0NR8FMqmjEedcnMdj9CeUiUBWwQ09WG', 'Emily Johnson', 'Female', 28, 'emily.johnson@example.com', 1, 0, 1, 'Exploring the world of coding and creating amazing web experiences.'), 
                                 ('https://drive.google.com/thumbnail?id=153_WwCRYNkQFkFgiRtY20Aom6LVXqixL', 'Daniel Miller', 'Male', 32, 'daniel.miller@example.com', 1, 1, 0, 'Software engineer with a love for problem-solving and building efficient solutions.'),
-                                ('https://drive.google.com/thumbnail?id=14hIYqyiKndAfMQf7zJfDoWo9cfqLc4kd', 'Christopher Davis', 'Male', 27, 'chris.davis@example.com', 0, 1, 0, 'Tech enthusiast exploring the endless possibilities of software development.'),
-                                ('https://drive.google.com/thumbnail?id=19fMtzUAjzfnDolAQ_R1CehwqXwf9_F7y', 'Leila Wilson', 'Other', 26, 'leila.wilson@example.com', 1, 1, 0, 'Web developer with a passion for creating seamless user experiences.')";
+                                ('https://drive.google.com/thumbnail?id=19fMtzUAjzfnDolAQ_R1CehwqXwf9_F7y', 'Leila Wilson', 'Other', 26, 'leila.wilson@example.com', 0, 1, 1, 'Web developer with a passion for creating seamless user experiences.')";
                         if ($conn->query($query) === TRUE) {
                             if ($debug) {
                                 echo "<br>Default Records Created Successfully<br>";
@@ -155,22 +154,19 @@ if ($use_active) {
         $gender = $_POST['gender'];
         $age = $_POST['age'];
         $email = $_POST['email'];
-        if ($_POST['html']){
+        if ($_POST['html']) {
             $html = 1;
-        }
-        else {
+        } else {
             $html = 0;
         }
-        if ($_POST['css']){
+        if ($_POST['css']) {
             $css = 1;
-        }
-        else {
+        } else {
             $css = 0;
         }
-        if ($_POST['javascript']){
+        if ($_POST['javascript']) {
             $javascript = 1;
-        }
-        else {
+        } else {
             $javascript = 0;
         }
         $languages = $_POST['languages'];
@@ -216,10 +212,10 @@ $conn->close();
 
 ?>
 
-<br/>
+<br>
 <section class="greetings-section">
     <h1>Interest Repository</h1>
-    <br/>
+    <br>
     <p class="justified-text">
         Welcome to our Subscribers Info Repository – your gateway to discovering the diverse interests of our community!
         This page serves as a centralized hub, providing a comprehensive collection of information about our valued
@@ -231,7 +227,7 @@ $conn->close();
 
 <section class="table-section">
     <h2>Our User Interests</h2>
-    <br/>
+    <br>
     <div class="container">
         <table class="data-table">
             <thead>
@@ -270,7 +266,7 @@ $conn->close();
                             $favoriteLan[$counter] = "JavaScript";
                             $counter += 1;
                         }
-                        // Accessing elements
+                        // printing Favorite Languages separated by a comma
                         echo implode(', ', $favoriteLan);
                         ?>
                     </td>
@@ -279,10 +275,9 @@ $conn->close();
             <?php endforeach; ?>
             </tbody>
         </table>
-        <br/><br/><br/>
+        <br><br><br>
         <p style="color: #f5f5f5; font-size: small; font-style: italic; text-align: center"> All the Predefined Images
-            Avatars where taken
-            from unsplash.com The specific link of each picture is register on each image caption.
+            Avatars where taken from unsplash.com
         </p>
     </div>
 
